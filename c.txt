@@ -1,0 +1,13 @@
+// elf: relocatable file , executable file , shared object file
+
+//compile to obj file , static lib , dynamic lib
+
+gcc -c xxx.c    // ->   xxx.o
+ar rcs libxxx.a xxx.o   //   ->  libxxx.a
+gcc -shared -fPIC -o libxxx.so xxx.o   //  ->  libxxx.so
+
+
+//strings - print the strings of printable characters in files
+
+strings -f xxx.o   //  look up all string
+strings -f * | grep "key word"  //  list the mapping of source file and obj file
